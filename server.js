@@ -28,7 +28,10 @@ app.post('/verify',async(req,res)=>
         {
             if(bord[row1][i]===clientnumber)
             {   
-                init();
+                let board= [[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]];
+                let ref={"index":[0,0],"counter":1,"bord":bord};
+                await fs.writeFileSync(`./suduko.json`,JSON.stringify(ref));
+                return res.status(200).json({message:'Fail',bord:bord});
                 return res.status(200).json({message:'Fail',bord:bord});
             }
         }
