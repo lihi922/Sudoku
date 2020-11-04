@@ -9,7 +9,7 @@ npm install express
 npm insall axios 
 
 run:
- "npm run div"
+ "npm run dev"
 
 ////LOG IN ////
 user name: lihi

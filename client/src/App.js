@@ -41,12 +41,12 @@ handleSubmit=(e)=>
         <img src={logo} className="App-logo" alt="logo" />  
 
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <lable> Name: </lable>
+          <label> Name: </label>
           <br></br>
           <input type='text' name='name'/>
           
           <br></br>
-          <lable>Password:</lable>
+          <label>Password:</label>
           <br></br>
           <input type='password' name='pass'/>
           <br></br><br></br>

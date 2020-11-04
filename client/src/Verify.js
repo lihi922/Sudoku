@@ -10,7 +10,7 @@ class Verify extends Component {
     state={
         login:false,
         welcom:false,
-        serverAns:"col 0 row 0 ? ",
+        serverAns:"col 1 row 1 ? ",
         celnumber:0,
         suduko: [
             [0,0,0,0,0,0,0,0,0],
@@ -42,7 +42,7 @@ class Verify extends Component {
 
             let res= await axios.post('/verify',body,config);
             let {message, bord} = res.data;
-            console.log(bord);
+           
             this.setState({
                 serverAns:message,
                 suduko:bord
@@ -52,7 +52,8 @@ class Verify extends Component {
         }
 
         if(this.state.serverAns==='Fail'){
-            console.error('FAIL VERIFY');
+
+            alert('FAIL VERIFY');
             this.setState({login:true});
 
         };
@@ -87,7 +88,7 @@ class Verify extends Component {
         
                 <form className='form1' onSubmit={this.handleSubmit_}>
                         <label >{this.state.serverAns}</label>
-                        <input type='number'name='innumber' min='1' max='9' />
+                        <input type='number'name='innumber' min='1' max='9' required />
                         <br></br><br></br>
                         <button className='button'>Submit</button>
                 </form>
