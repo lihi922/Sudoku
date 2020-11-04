@@ -1,0 +1,20 @@
+//GITHUB//
+
+https://github.com/lihiye/Suduko_cript.git
+
+///RUN///
+need to instal first :
+npm i  -D nodemon concurrently 
+npm install express 
+npm insall axios 
+
+run:
+ "npm run div"
+
+////LOG IN ////
+user name: lihi
+password: 12345
+
+//stedents//
+lihi yehuda 308113927
+regerv avital 307862029
